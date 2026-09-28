@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinflip</title>
+    <link rel="stylesheet" href="assets/css/coinflip.css" />
+  </head>
+  <body>
+    <div class="cf-root">
+
+      <div class="cf-glow" id="glowWrap">
+        <div class="cf-scene">
+          <div class="cf-wrapper" id="coinWrapper">
+
+            <div class="cf-face cf-front">
+              <div class="cf-inner cf-ct">
+                <svg viewBox="0 0 80 80" width="88" height="88" fill="none">
+                  <polygon points="40,8 49,30 73,30 54,46 61,68 40,54 19,68 26,46 7,30 31,30"
+                    stroke="#63b3ed" stroke-width="2.5" fill="none"/>
+                </svg>
+                <span class="cf-label cf-ct-label">CT</span>
+                <span class="cf-sublabel">SIDE</span>
+              </div>
+            </div>
+
+            <div class="cf-face cf-back">
+              <div class="cf-inner cf-t">
+                <svg viewBox="0 0 80 80" width="88" height="88" fill="none">
+                  <circle cx="40" cy="40" r="28" stroke="#d97706" stroke-width="2.5" fill="none"/>
+                  <line x1="20" y1="20" x2="60" y2="60" stroke="#d97706" stroke-width="2.5"/>
+                  <line x1="60" y1="20" x2="20" y2="60" stroke="#d97706" stroke-width="2.5"/>
+                </svg>
+                <span class="cf-label cf-t-label">T</span>
+                <span class="cf-sublabel">SIDE</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="cf-result" id="result"></div>
+      <button class="cf-btn" id="flipBtn">FLIP</button>
+
+    </div>
+
+    <!-- MVC: Model → View → Controller (load order matters) -->
+    <script src="assets/java/coinflip.model.js"></script>
+    <script src="assets/java/coinflip.view.js"></script>
+    <script src="assets/java/coinflip.controller.js"></script>
+  </body>
+</html>
